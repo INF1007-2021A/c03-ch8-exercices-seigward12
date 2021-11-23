@@ -28,7 +28,7 @@ def tripler_espace(file_path1, file_path2):
 def ecrire_notes(lecture_notes, ecriture_notes):
     with open(lecture_notes, 'r') as f1, open(ecriture_notes, 'w') as f2:
         for ligne in f1:
-            for lettre, note in enumerate(PERCENTAGE_TO_LETTER):
+            for lettre, note in PERCENTAGE_TO_LETTER.items():
                 if note[1] > int(ligne) >= note[0]:
                     f2.write(PERCENTAGE_TO_LETTER[lettre] + '\n')
 
